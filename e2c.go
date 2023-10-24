@@ -130,17 +130,17 @@ func outImgToXYZ(i, j, faceIdx, faceSize int) vec3 {
 
 	switch faceIdx {
 	case 0:
-		return vec3{-1.0, 1.0 - a, 1.0 - b}
+		return vec3{1.0 - a, 1.0, 1.0 - b}
 	case 1:
 		return vec3{a - 1.0, -1.0, 1.0 - b}
 	case 2:
-		return vec3{1.0, a - 1.0, 1.0 - b}
-	case 3:
-		return vec3{1.0 - a, 1.0, 1.0 - b}
-	case 4:
 		return vec3{b - 1.0, a - 1.0, 1.0}
-	case 5:
+	case 3:
 		return vec3{1.0 - b, a - 1.0, -1.0}
+	case 4:
+		return vec3{1.0, a - 1.0, 1.0 - b}
+	case 5:
+		return vec3{-1.0, 1.0 - a, 1.0 - b}
 	default:
 		return vec3{0, 0, 0}
 	}
